@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #f4f7fc;
+    height: 100vh;
+    font-family: 'Montserrat',sans-serif;
+}
+
+.container{
+    margin: 0 auto;
+    max-width: 90vw;
+    border: 2px solid green;
+    height: 100%;
+}
+
+.container>h1{
+   
+    font-weight: 600; 
+    font-size: 2.5rem;
+    margin: 20px 0 20px 0;
+    border: 2px solid green;
+    color: #a3a3a3;
+    text-transform: uppercase;
+}
+
+.stats{
+    border: 2px solid green;
+}
+
+.stats>.card{
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    background-color: #ffffff;
+    box-shadow: 7px 7px 15px rgba(55, 84, 170, 0.15), 
+    -7px -7px 20px rgba(255, 255, 255, 1), 
+    inset 0px 0px 4px rgba(255, 255, 255, 0.2), 
+    inset 7px 7px 15px rgba(55, 84, 170, 0), 
+    inset -7px -7px 20px rgba(255, 255, 255, 0), 
+    0px 0px 4px rgba(255, 255, 255, 0);
+
+    margin-bottom: 3em;
+}
+
+.card>span{
+    font-size: 2.2rem;
+    font-weight: 600;
+}
+
+.card>p{
+    color: #a3a3a3;
+    font-size: 1.3rem;
+}
+
+.country{
+    background-color: #ffffff;
+    padding: 2em 2em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.countryCard{
+    height: 150px;
+    width: 150px;
+    /* border: 2px solid green; */
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 2em;
+    padding-top: 2em;
+    position: relative;
+    box-shadow: 7px 7px 15px rgba(55, 84, 170, 0.15), 
+    -7px -7px 20px rgba(255, 255, 255, 1), 
+    inset 0px 0px 4px rgba(255, 255, 255, 0.2), 
+    inset 7px 7px 15px rgba(55, 84, 170, 0), 
+    inset -7px -7px 20px rgba(255, 255, 255, 0), 
+    0px 0px 4px rgba(255, 255, 255, 0);
+
+}
+
+.countryCard>.img{
+    /* border: 2px solid green; */
+}
+
+.countryCard>span{
+    position: absolute;
+    bottom: 0;
+    
+}
+img{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
