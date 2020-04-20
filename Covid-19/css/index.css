@@ -1,108 +1,146 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap');
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+
+* {  
+  scroll-behavior: smooth;
 }
 
-body{
-    background-color: #f4f7fc;
-    height: 100vh;
-    font-family: 'Montserrat',sans-serif;
+body {
+	font-family: "Montserrat", sans-serif;
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+  background-color: #F4F7FC;
 }
 
-.container{
-    margin: 0 auto;
-    max-width: 90vw;
-    border: 2px solid green;
-    height: 100%;
+.title {
+  margin: 20px;
+  font-weight: 600;
+  font-size: 35px;
+  color: #a3a3a3;
 }
 
-.container>h1{
-   
-    font-weight: 600; 
-    font-size: 2.5rem;
-    margin: 20px 0 20px 0;
-    border: 2px solid green;
-    color: #a3a3a3;
-    text-transform: uppercase;
-}
-
-.stats{
-    border: 2px solid green;
-}
-
-.stats>.card{
-    font-weight: 400;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 200px;
-    background-color: #ffffff;
-    box-shadow: 7px 7px 15px rgba(55, 84, 170, 0.15), 
-    -7px -7px 20px rgba(255, 255, 255, 1), 
-    inset 0px 0px 4px rgba(255, 255, 255, 0.2), 
-    inset 7px 7px 15px rgba(55, 84, 170, 0), 
-    inset -7px -7px 20px rgba(255, 255, 255, 0), 
+.card {
+  width: 200px;
+  height: 200px;
+  background: #fff;
+  display: inline-block;
+  margin: 20px;
+  text-align: center;
+  transition: 0.8s;
+  box-shadow: 7px 7px 15px rgba(55, 84, 170, 0.15),
+    -7px -7px 20px rgba(255, 255, 255, 1),
+    inset 0px 0px 4px rgba(255, 255, 255, 0.2),
+    inset 7px 7px 15px rgba(55, 84, 170, 0),
+    inset -7px -7px 20px rgba(255, 255, 255, 0),
     0px 0px 4px rgba(255, 255, 255, 0);
-
-    margin-bottom: 3em;
+  transition: 0.8s;
 }
 
-.card>span{
-    font-size: 2.2rem;
-    font-weight: 600;
+
+.header .card .stats {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.card>p{
-    color: #a3a3a3;
-    font-size: 1.3rem;
+.number {
+  font-size: 35px;
+  font-weight: 600;
+}
+.factor {
+  color: #a3a3a3;
 }
 
-.country{
-    background-color: #ffffff;
-    padding: 2em 2em;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    
+.flags {
+  max-width: 930px;
+  background: #fff;
+  display: block;
+  margin: 20px;
+  text-align: center;
+  box-shadow: 7px 7px 15px rgba(55, 84, 170, 0.15),
+  -7px -7px 20px rgba(255, 255, 255, 1),
+  inset 0px 0px 4px rgba(255, 255, 255, 0.2),
+  inset 7px 7px 15px rgba(55, 84, 170, 0),
+  inset -7px -7px 20px rgba(255, 255, 255, 0),
+  0px 0px 4px rgba(255, 255, 255, 0);
+transition: 0.2s;
+  padding-bottom: 20px;
 }
 
-.countryCard{
-    height: 150px;
-    width: 150px;
-    /* border: 2px solid green; */
-    border-radius: 20px;
-    display: flex;
-    align-items: center;
-    
-    flex-direction: column;
-    text-align: center;
-    margin-bottom: 2em;
-    padding-top: 2em;
-    position: relative;
-    box-shadow: 7px 7px 15px rgba(55, 84, 170, 0.15), 
-    -7px -7px 20px rgba(255, 255, 255, 1), 
-    inset 0px 0px 4px rgba(255, 255, 255, 0.2), 
-    inset 7px 7px 15px rgba(55, 84, 170, 0), 
-    inset -7px -7px 20px rgba(255, 255, 255, 0), 
+.flags img {
+  margin: 20px;
+}
+
+.flag.selected{
+    border: 3px solid #e85f99;
+    border-radius: 10px;
+    transform: scale(1.2);
+}
+
+
+.flag {
+  display: inline-block;
+  cursor: pointer;
+  margin: 1em;
+  box-shadow: 7px 7px 15px rgba(55, 84, 170, 0.15),
+    -7px -7px 20px rgba(255, 255, 255, 1),
+    inset 0px 0px 4px rgba(255, 255, 255, 0.2),
+    inset 7px 7px 15px rgba(55, 84, 170, 0),
+    inset -7px -7px 20px rgba(255, 255, 255, 0),
     0px 0px 4px rgba(255, 255, 255, 0);
-
+  transition: 0.2s;
 }
 
-.countryCard>.img{
-    /* border: 2px solid green; */
+
+
+.flag div {
+  display: block;
+  font-size: 10px;
+  width: 92px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-.countryCard>span{
-    position: absolute;
-    bottom: 0;
-    
+.active {
+    border-radius: 10px;
+    background-color: #46a049;
+  box-shadow: 2px 3px 5px 0px black;
 }
-img{
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
+
+@media screen and (max-width: 1020px) {
+.card {
+  width: 100%;
+  height: 200px;
+  background: #fff;
+  display: inline-block;
+  margin: 20px;
+  text-align: center;
+  transition: 0.8s;
+  box-shadow: 7px 7px 15px rgba(55, 84, 170, 0.15),
+    -7px -7px 20px rgba(255, 255, 255, 1),
+    inset 0px 0px 4px rgba(255, 255, 255, 0.2),
+    inset 7px 7px 15px rgba(55, 84, 170, 0),
+    inset -7px -7px 20px rgba(255, 255, 255, 0),
+    0px 0px 4px rgba(255, 255, 255, 0);
+  transition: 0.5s;
 }
+}
+
+.footer {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.footer-love-icon {
+  height: 10px;
+  padding-left: 1px;
+  padding-right: 1px;
+  animation: beat .55s infinite alternate;
+}
+@keyframes beat{
+  to { transform: scale(1.4); }
+}
+

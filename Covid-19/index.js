@@ -1,16 +1,46 @@
-const countryEl = document.querySelector('.country')
+
 const cardEl = document.querySelectorAll('.countryCard')
 
 
+fetch(`https://api.covid19api.com/summary`)
+    .then(res => res.json())
+    .then(data => {
+        console.log(data.Global)
+
+        document.getElementById('title').innerText = "COVID-19 STATISTICS - GLOBAL";
+
+        document.getElementById('total').innerHTML = `<div class="stats">
+      <div class="number">${data.Global.TotalConfirmed}</div>
+      <div class="factor">Infected</div>
+    </div>`;
+
+        document.getElementById('recover').innerHTML = `<div class="stats">
+      <div class="number">${data.Global.TotalRecovered}</div>
+      <div class="factor">Recovered</div>
+    </div>`;
+
+        document.getElementById('sick').innerHTML = `<div class="stats">
+      <div class="number">${data.Global.NewConfirmed}</div>
+      <div class="factor">Sick</div>
+    </div>`;
+
+        document.getElementById('dead').innerHTML = `<div class="stats">
+      <div class="number">${data.Global.TotalDeaths}</div>
+      <div class="factor">Deaths</div>
+    </div>`;
+
+    })
 
 
+
+const countryEl = document.querySelector('.flags')
 
 async function country() {
     const res = await fetch(`https://restcountries.eu/rest/v2/all`)
     const data = await res.json()
 
     data.forEach(country => {
-        console.log(country.name)
+
         const flagParentDiv = document.createElement('div')
         flagParentDiv.classList.add('flag')
 
@@ -21,19 +51,91 @@ async function country() {
         flagParentDiv.setAttribute('title', country.name)
         flagParentDiv.setAttribute('data-code', country.alpha2Code)
 
-        flagParentDiv.addEventListener('click', () => { alert('click') })
+        flagParentDiv.addEventListener('click', () => {
+            const allflags = document.querySelectorAll('.selected')
+            console.log(allflags)
+            allflags.forEach(flag => {
 
-        imgNameSpan.appendChild(imgTag)
+                flag.classList.remove('selected')
+            })
+            flagParentDiv.classList.add('selected')
+
+            getCountrydata(country.alpha2Code)
+            window.scrollTo(0, 0)
+        })
+
+        imgNameSpan.innerText = country.name
+        flagParentDiv.appendChild(imgTag)
+        flagParentDiv.appendChild(imgNameSpan)
+
+        countryEl.appendChild(flagParentDiv)
         //countryEl.innerHTML += (HTML)
 
 
 
     })
-    console.log(data)
 
 }
 
+function getCountrydata(code) {
+    fetch(`https://api.thevirustracker.com/free-api?countryTotal=${code}`)
+        .then(res => res.json())
+        .then(data => {
+            console.log(code)
+            console.log(data)
+            document.getElementById('title').innerHTML = `COVID-19 STATISTICS - ${data.countrydata[0].info.title}`
 
+            // total infected
+            document.getElementById('total').innerHTML = `<div class='stats'>
+            <div class='number'>${data.countrydata[0].total_cases}</div>
+            <div class='factor'>Total Infected</div>
+            </div>`
+
+            // total recovered
+            document.getElementById('recover').innerHTML = `<div class="stats">
+            <div class="number">${data.countrydata[0].total_recovered}</div>
+            <div class="factor">Recovered</div>
+          </div>`;
+
+            // total sick people
+            document.getElementById('sick').innerHTML = `<div class="stats">
+            <div class="number">${data.countrydata[0].total_active_cases}</div>
+            <div class="factor">Sick</div>
+            </div>`;
+
+            // total deaths
+            document.getElementById('dead').innerHTML = `<div class="stats">
+            <div class="number">${data.countrydata[0].total_deaths}</div>
+            <div class="factor">Deaths</div>
+            </div>`;
+
+        })
+        .catch(err => {
+            document.getElementById('title').innerHTML = `No data available`
+
+            document.getElementById('total').innerHTML = `<div class="stats">
+      <div class="number">XX</div>
+      <div class="factor">Infected</div>
+    </div>`;
+
+            document.getElementById('recover').innerHTML = `<div class="stats">
+      <div class="number">XX</div>
+      <div class="factor">Recovered</div>
+    </div>`;
+
+            document.getElementById('sick').innerHTML = `<div class="stats">
+      <div class="number">XX</div>
+      <div class="factor">Sick</div>
+    </div>`;
+
+            document.getElementById('dead').innerHTML = `<div class="stats">
+      <div class="number">XX</div>
+      <div class="factor">Deaths</div>
+    </div>`;
+            console.log('Not Infected yet');
+        })
+
+}
 
 
 country()
