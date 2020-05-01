@@ -65,7 +65,7 @@ body {
   inset 7px 7px 15px rgba(55, 84, 170, 0),
   inset -7px -7px 20px rgba(255, 255, 255, 0),
   0px 0px 4px rgba(255, 255, 255, 0);
-transition: 0.2s;
+transition: 0.5s;
   padding-bottom: 20px;
 }
 

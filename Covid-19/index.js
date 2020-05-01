@@ -111,7 +111,7 @@ function getCountrydata(code) {
 
         })
         .catch(err => {
-            document.getElementById('title').innerHTML = `No data available`
+            document.getElementById('title').innerHTML = `No data available for this country`
 
             document.getElementById('total').innerHTML = `<div class="stats">
       <div class="number">XX</div>
