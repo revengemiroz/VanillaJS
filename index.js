@@ -49,8 +49,13 @@ document.onkeydown = (e) => {
 
 const projects = [
     {
+        name: 'Covid-19',
+        github: 'https://github.com/revengemiroz/VanillaJS/tree/master/Covid-19'
+
+    },
+    {
         name: 'Background-Picker',
-        github: 'https://github.com/revengemiroz/FrontEnd-Mentor/tree/master/four-card-feature-section'
+        github: 'https://github.com/revengemiroz/VanillaJS/tree/master/Background-Picker'
 
     }
 
