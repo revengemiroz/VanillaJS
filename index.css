@@ -8,7 +8,7 @@
     --color-third: #e85f99;
     --color-forth: #50bda1;
     --block-width: 370px;
-    --block-height: 400px;
+    --block-height: 340px;
     --border-width: .625rem;
     --border-radius-outer: 8px;
     --border-radius-inner: calc(var(--border-radius-outer) / 2);
@@ -63,6 +63,7 @@ img{
     width: 100%;
     object-fit: contain;
     overflow: hidden;
+    
 }
 
 .links{
