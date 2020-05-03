@@ -10,19 +10,21 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     height: 100vh;
     background-color: #f1f5f8;
     font-family: 'Roboto', sans-serif;
 }
 
 .container{
+   /* border: 2px solid green; */
+   margin: 0 auto;
    display: flex;
    flex-direction: column;
    align-items: center;
 }
 
 p{
+    /* border: 2px solid green; */
     font-size: 4.5rem;
     font-weight: 500;
     color: #102a42;
@@ -54,9 +56,25 @@ button:hover{
 }
 
 .buttons{
+    /* border: 2px solid green; */
     margin-top: 2em;
-    width: 500px;
     display: inline-flex;
     justify-content: space-evenly;
+}
 
+.buttons>.reset{
+    margin: 0 1.5em 0 1.5em;
+}
+
+@media (max-width:376px){
+
+   .buttons{
+       display: flex;
+       flex-direction: column;
+       margin: 10px auto;
+   }
+
+   button{
+    margin: 15px auto;
+   }
 }
