@@ -23,15 +23,7 @@ closeBtn.addEventListener('click', () => {
 })
 
 hamburger.addEventListener('click', () => {
-    layer1.classList.add('transform')
     sidebar.style.display = 'block'
     sidebar.classList.add('block')
 })
 
-
-
-// list.forEach(li => {
-//     li.addEventListener('click', () => {
-//         li.classList.remove('active')
-//     })
-// })
