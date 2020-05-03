@@ -62,6 +62,11 @@ const projects = [
         name: 'Counter',
         github: 'https://github.com/revengemiroz/VanillaJS/tree/master/Counter'
 
+    },
+    {
+        name: 'Sidebar',
+        github: 'https://github.com/revengemiroz/VanillaJS/tree/master/Sidebar'
+
     }
 
 ]
