@@ -57,6 +57,11 @@ const projects = [
         name: 'Background-Picker',
         github: 'https://github.com/revengemiroz/VanillaJS/tree/master/Background-Picker'
 
+    },
+    {
+        name: 'Counter',
+        github: 'https://github.com/revengemiroz/VanillaJS/tree/master/Counter'
+
     }
 
 ]
