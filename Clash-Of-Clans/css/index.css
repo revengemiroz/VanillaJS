@@ -37,6 +37,26 @@ body{
     top: -150px;
     right: -130px;
     height: 500px;
+    user-select: none;
+    animation: shake 3s infinite;
+}
+
+@keyframes shake{
+    0%{
+        transform: scale(0.9);
+    }
+    25%{
+        transform: scale(1);
+    }
+    50%{
+        transform: 1.1;
+    }
+    75%{
+        transform: 1.3;
+    }
+    100%{
+        transform: scale(0.9);
+    }
 }
 
 img{
@@ -67,7 +87,14 @@ img{
     padding: 0.1em 0 0.1em 0;
     border-radius: 20px;
     margin-bottom: 0.5em;
+    
 }
+
+.ratings>span:first-child:hover{
+    transform: scale(1.2);
+    transition:0.2s ease-in-out;
+}
+
 
 .ratings>span:nth-child(2){
     color: #676c7b;
