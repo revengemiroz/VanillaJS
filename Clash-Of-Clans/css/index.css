@@ -12,7 +12,7 @@ body{
 
 .container{
     border-radius: 40px;
-    margin: 15vh auto;
+    margin: 15vh auto 10vh;
     background-color: #ffffff;
     width: 400px;
     height: 870px;
@@ -32,14 +32,11 @@ body{
     box-shadow: 14px 25px 40px -1px rgba(0,0,0,0.48);
 }
 
-
-
 .imageContainer{
     position: absolute;
     top: -150px;
     right: -130px;
     height: 500px;
-    
 }
 
 img{
@@ -167,4 +164,49 @@ img{
     height: 150px;
     border-radius: 15px;
     object-fit: cover;
+    box-shadow: 7px 15px 30px -1px rgba(0,0,0,0.49);
+
+}
+
+
+@media (max-width: 450px){
+
+    .container{
+        width: 350px;
+    }
+
+    .imageContainer{
+        top: -120px;
+        right: 10px;
+        height: 420px;
+        width: 380px;
+        background-color: transparent;
+    }
+
+    .img{
+        width: 125px;
+        height: 125px;
+    }
+
+}
+
+@media (max-width: 375px){
+
+    .container{
+        width: 320px;
+    }
+
+    .imageContainer{
+        top: -120px;
+        right: 10px;
+        height: 420px;
+        width: 380px;
+        background-color: transparent;
+    }
+
+    .img{
+        width: 125px;
+        height: 125px;
+    }
+
 }
