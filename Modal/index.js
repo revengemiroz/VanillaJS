@@ -9,11 +9,18 @@ show.addEventListener('click', () => {
     modal.classList.add('show')
     console.warn('click')
     kpop.setAttribute('controls', '')
+    modal.style.animation = 'show 0.5s ease-in'
 })
 
 close.addEventListener('click', () => {
     console.warn('close')
-    modal.style.display = 'none'
-    show.style.display = 'block'
+    modal.style.animation = 'exits 0.5s ease-in'
+
+    setTimeout(function () {
+        modal.style.display = 'none'
+        show.style.display = 'block'
+    }, 500);
     kpop.pause()
 })
+
+

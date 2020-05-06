@@ -21,7 +21,6 @@ body{
     height: 500px;
     width: 500px;
     position: relative;
-    animation: show 0.5s ease-in;
 }
 
 @keyframes show{
@@ -34,9 +33,20 @@ body{
     }
 }
 
+@keyframes exits{
+
+    from{
+        height: 50vh;
+    }
+    to{
+        height:  0vh;
+    }
+}
+
+
 .modal>span{
     margin-top: 0.3em;
-    margin-left: 3em;
+    margin-left: 2.5em;
     display: flex;
     justify-content: space-evenly;
     
@@ -71,7 +81,7 @@ video{
 
 span{
     font-weight: 900;
-    font-size: 2rem;
+    font-size: 1.9rem;
     color: #f18867;
 }
 
