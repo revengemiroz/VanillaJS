@@ -72,6 +72,11 @@ const projects = [
         name: 'Clash-Of-Clans',
         github: 'https://github.com/revengemiroz/VanillaJS/tree/master/Clash-Of-Clans'
 
+    },
+    {
+        name: 'Modal',
+        github: 'https://github.com/revengemiroz/VanillaJS/tree/master/Modal'
+
     }
 
 ]
