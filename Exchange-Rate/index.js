@@ -13,6 +13,65 @@ const fromnumber = document.querySelector('.fromnumber')
 const fromAmount = document.querySelector('.fromAmount')
 const toAmount = document.querySelector('.toAmount')
 
+const fullName = {
+    HKD: 'Honk Kong dollar',
+    AED: 'United Arab Emirates Dirham',
+    ARS: 'Argentine Peso',
+    AUD: 'Australian Dollar',
+    BGN: 'Bulgarian Lev',
+    BRL: 'Brazilian Real',
+    BSD: 'Bahamian Dollar',
+    CAD: 'Canadian Dollar',
+    CHF: 'Swiss Franc',
+    CLP: 'Chilean Peso',
+    CNY: 'Chinese Yuan',
+    COP: 'Colombian Peso',
+    CZK: 'Czech Koruna',
+    DKK: 'Danish Krone',
+
+    DOP: 'Dominican Peso',
+    EGP: 'Egyptian Pound',
+    EUR: 'Euro',
+    FJD: 'Fijian Dollar',
+    GBP: 'Pound sterling',
+    GTQ: 'Guatemalan Quetzal',
+    HRK: 'Croatian Kuna',
+    HUF: 'Hungarian Forint',
+    IDR: 'Indonesian Rupiah',
+
+    ILS: 'Israeli New Shekel',
+    INR: 'Indian Rupee',
+    ISK: 'Icelandic Króna',
+    JPY: 'Japanese Yen',
+    KRW: 'South Korean won',
+    KZT: 'Kazakhstani Tenge',
+    MXN: 'Mexican Peso',
+    MYR: 'Malaysian Ringgit',
+    NOK: 'Norwegian Krone',
+
+    NZD: 'New Zealand Dollar',
+    PAB: 'Panamanian Balboa',
+    PEN: 'Sol',
+    PHP: 'Philippine peso',
+    PKR: 'Pakistani Rupee',
+    PLN: 'Poland złoty',
+    PYG: 'Paraguayan Guarani',
+    RON: 'Romanian Leu',
+    RUB: 'Russian Ruble',
+
+    SAR: 'Saudi Riyal',
+    SEK: 'Swedish Krona',
+    SGD: 'Singapore Dollar',
+    THB: 'Thai Baht',
+    TRY: 'Turkish lira',
+    TWD: 'TWD',
+    UAH: 'Ukrainian hryvnia',
+    USD: 'United States Dollar',
+    UYU: 'Uruguayan Peso',
+    ZAR: 'South African Rand'
+};
+
+
 async function get(startingCountry = 'USD', from = 'USD', to = 'CAD') {
     const res = await fetch(`https://api.exchangerate-api.com/v4/latest/${startingCountry}`)
     const data = await res.json()
@@ -27,12 +86,12 @@ async function get(startingCountry = 'USD', from = 'USD', to = 'CAD') {
         country.push(keys)
         currencyRates.push(values)
         // console.log(country, currencyRates)
-        const option = document.createElement('option')
-        const option2 = document.createElement('option')
-        option.value = keys
-        option2.value = keys
-        fromcountryCodeDatalist.appendChild(option)
-        tocountryCodeDatalist.appendChild(option2)
+        // const option = document.createElement('option')
+        // const option2 = document.createElement('option')
+        // option.value = keys
+        // option2.value = keys
+        // fromcountryCodeDatalist.appendChild(option)
+        // tocountryCodeDatalist.appendChild(option2)
     }
 
     const index = country.indexOf(to)
@@ -78,24 +137,16 @@ toAmount.addEventListener('input', inputHandler2)
 get()
 
 
-// country.push(Object.keys(rates))
-    // currencyRates.push(Object.values(rates))
-    // console.log(currencyRates)
+window.onload = () => {
+    for (const [keys] of Object.entries(fullName)) {
 
-    // for (let i = 0; i < country[0].length; i++) {
-    //     const option = document.createElement('option')
-    //     const option2 = document.createElement('option')
-    //     option.value = country[0][i + 1]
-    //     option2.value = country[0][i + 1]
-    //     // fromcountryCode.value = 'USD'
-    //     fromcountryCodeDatalist.appendChild(option)
-    //     tocountryCodeDatalist.appendChild(option2)
-    // }
+        const option = document.createElement('option')
+        const option2 = document.createElement('option')
 
-    // const to = tocountryCode.value
-    // const from = fromcountryCode.value
+        option.value = keys
+        option2.value = keys
 
-    // console.log(a.includes(to, 1))
-
-    // console.warn(from, to, a)
-    // toAmount.value = currencyRates[0][index]
+        fromcountryCodeDatalist.appendChild(option)
+        tocountryCodeDatalist.appendChild(option2)
+    }
+}
