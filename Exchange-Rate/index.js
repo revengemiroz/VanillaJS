@@ -2,6 +2,8 @@
 const fromcountryCode = document.querySelector('.fromcountryCode')
 const tocountryCode = document.querySelector('.tocountryCode')
 
+const dates = document.querySelector('.date')
+
 const fromcountryCodeDatalist = document.querySelector('#fromcountryCode')
 const tocountryCodeDatalist = document.querySelector('#tocountryCode')
 
@@ -77,6 +79,8 @@ async function get(startingCountry = 'USD', from = 'USD', to = 'CAD') {
     const data = await res.json()
     const rates = data.rates
     console.log(data)
+
+    timeConverter(data.time_last_updated)
 
     const country = []
     const currencyRates = []
@@ -158,3 +162,17 @@ window.onload = () => {
         tocountryCodeDatalist.appendChild(option2)
     }
 }
+
+
+function timeConverter(UNIX_timestamp) {
+    var a = new Date(UNIX_timestamp * 1000);
+    var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    var year = a.getFullYear();
+    var month = months[a.getMonth()];
+    var date = a.getDate();
+    var hour = a.getHours();
+    var min = a.getMinutes();
+    var sec = a.getSeconds();
+    var time = date + ' ' + month + ' ' + year + ' ' + hour + ':' + min + ':' + sec;
+    return dates.innerText = `${time} - Last Updated`;
+}  
