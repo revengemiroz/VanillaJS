@@ -97,15 +97,15 @@ async function get(startingCountry = 'USD', from = 'USD', to = 'CAD') {
     toAmount.value = currencyRates[index]
 
     for (const [keys, values] of Object.entries(fullName)) {
-        if (keys == startingCountry && keys == to) {
+        if (keys == startingCountry.toUpperCase() && keys == to.toUpperCase()) {
             tonumber.innerText = `${currencyRates[index]} ${values}`
             fromnumber.innerText = `1 ${values}`
         }
-        else if (keys == startingCountry) {
+        else if (keys == startingCountry.toUpperCase()) {
             fromnumber.innerText = `1 ${values}`
         }
 
-        if (keys == to) {
+        if (keys == to.toUpperCase()) {
             tonumber.innerText = `${currencyRates[index]} ${values}`
         }
     }
