@@ -85,13 +85,6 @@ async function get(startingCountry = 'USD', from = 'USD', to = 'CAD') {
 
         country.push(keys)
         currencyRates.push(values)
-        // console.log(country, currencyRates)
-        // const option = document.createElement('option')
-        // const option2 = document.createElement('option')
-        // option.value = keys
-        // option2.value = keys
-        // fromcountryCodeDatalist.appendChild(option)
-        // tocountryCodeDatalist.appendChild(option2)
     }
 
     const index = country.indexOf(to)
@@ -102,6 +95,15 @@ async function get(startingCountry = 'USD', from = 'USD', to = 'CAD') {
 
     fromnumber.innerText = `1 ${startingCountry}`
     toAmount.value = currencyRates[index]
+
+    for (const [keys, values] of Object.entries(fullName)) {
+        if (keys == to) {
+            tonumber.innerText = `${currencyRates[index]} ${values}`
+        }
+        else if (keys == startingCountry) {
+            fromnumber.innerText = `1 ${values}`
+        }
+    }
 }
 
 fromcountryCode.addEventListener('change', () => {
