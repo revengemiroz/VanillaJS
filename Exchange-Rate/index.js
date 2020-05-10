@@ -113,6 +113,7 @@ async function get(startingCountry = 'USD', from = 'USD', to = 'CAD') {
 
 fromcountryCode.addEventListener('change', () => {
     console.log(fromcountryCode.value)
+    fromAmount.value = 1
     get(fromcountryCode.value, fromcountryCode.value, tocountryCode.value)
 })
 
