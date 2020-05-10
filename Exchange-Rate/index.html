@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exchange List</title>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="details">
+            <span class="fromnumber">1 <span class="fromText">Nepalese Rupee</span> equals</span>
+            <p class="tonumber">10 <strong class="toText">South Korean</strong></p>
+            <small class="date">May 8, 07:54 UTC - Disclaimer</small>
+        </div>
+
+        <div class="currency">
+            <div class="inputCollection">
+                <input class="fromAmount" type="number" max="1000" value="1">
+
+                <input class="fromcountryCode" list="fromcountryCode" type="text" value="USD">
+                <datalist id='fromcountryCode'>
+
+                </datalist>
+            </div>
+
+            <div class="inputCollection">
+                <input class="toAmount" type="number" value="1">
+
+                <input class="tocountryCode" list="tocountryCode" type="text" value="CAD">
+                <datalist id='tocountryCode'>
+
+                </datalist>
+            </div>
+
+        </div>
+        <small>Data provided by exchangerate-api.com for Currency</small>
+    </div>
+</body>
+<script src="./index.js"></script>
+
+</html>

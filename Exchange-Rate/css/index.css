@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container{
+    border: 1px solid #dfe1e5;
+    padding: 1.5em 1em 1.5em 1em;
+    border-radius: 10px;
+    box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+}
+
+.currency{
+    display: flex;
+    flex-direction: column;
+    margin-top: 1em;
+    /* border: 2px solid green; */
+    width: 100%;
+}
+
+.inputCollection{
+    display: flex;
+    justify-content: space-between;
+}
+
+input[type='number'],input[type='text']{
+    width: 195px;
+    padding: 0.6em 0 0.6em 1em;
+    border: 1px solid #DFE1E5;
+    border-radius: 5px;
+    outline: none;
+    margin-bottom: 0.6em;
+    color:#70757A;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+input[type='number']::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+}
+
+input[type='number']:focus,input[type='text']:focus{
+   border: 2px solid #e2bc73;
+}
+
+.fromcountryCode,.tocountryCode{
+    color: #212121 !important;
+}
+
+span{
+    color: #70757A;
+    font-weight: normal;
+    font-size: 16px;
+    
+}
+
+p{
+    color: #212121;
+    width:100%;
+    font-size: 2.7rem;
+    line-height: 1.2em;
+}
+
+small{
+    color: #70757A;
+}
