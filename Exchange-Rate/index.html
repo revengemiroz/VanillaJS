@@ -20,23 +20,30 @@
             <div class="inputCollection">
                 <input class="fromAmount" type="number" max="1000" value="1">
                 <small>from</small>
-                <input class="fromcountryCode" list="fromcountryCode" type="text" value="USD">
-                <datalist id='fromcountryCode'>
+                <span class="arrow">
+                    <input class="fromcountryCode" list="fromcountryCode" type="text" value="USD">
+                    <datalist id='fromcountryCode'>
 
-                </datalist>
+                    </datalist>
+                </span>
+
             </div>
 
             <div class="inputCollection">
                 <input class="toAmount" type="number" value="1">
                 <small>to</small>
-                <input class="tocountryCode" list="tocountryCode" type="text" value="CAD">
-                <datalist id='tocountryCode'>
 
-                </datalist>
+                <span class="arrow">
+                    <input class="tocountryCode" list="tocountryCode" type="text" value="CAD">
+                    <datalist id='tocountryCode'>
+
+                    </datalist>
+                </span>
+
             </div>
 
         </div>
-        <small>Data provided by exchangerate-api.com for Currency</small>
+        <small>Data provided by <strong>exchangerate-api.com</strong> for Currency</small>
     </div>
 </body>
 <script src="./index.js"></script>
