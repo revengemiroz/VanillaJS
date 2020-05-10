@@ -114,12 +114,12 @@ async function get(startingCountry = 'USD', from = 'USD', to = 'CAD') {
 fromcountryCode.addEventListener('change', () => {
     console.log(fromcountryCode.value)
     fromAmount.value = 1
-    get(fromcountryCode.value, fromcountryCode.value, tocountryCode.value)
+    get(fromcountryCode.value, fromcountryCode.value, tocountryCode.value.toUpperCase())
 })
 
 tocountryCode.addEventListener('change', () => {
     console.log(fromcountryCode.value)
-    get(fromcountryCode.value, fromcountryCode.value, tocountryCode.value)
+    get(fromcountryCode.value, fromcountryCode.value, tocountryCode.value.toUpperCase())
 })
 
 const inputHandler1 = function (e) {
