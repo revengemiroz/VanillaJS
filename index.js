@@ -77,6 +77,11 @@ const projects = [
         name: 'Modal',
         github: 'https://github.com/revengemiroz/VanillaJS/tree/master/Modal'
 
+    },
+    {
+        name: 'Exchange-Rate',
+        github: 'https://github.com/revengemiroz/VanillaJS/tree/master/Exchange-Rate'
+
     }
 
 ]
