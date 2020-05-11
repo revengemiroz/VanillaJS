@@ -82,8 +82,12 @@ const projects = [
         name: 'Exchange-Rate',
         github: 'https://github.com/revengemiroz/VanillaJS/tree/master/Exchange-Rate'
 
-    }
+    },
+    {
+        name: 'Nepali-Calendar',
+        github: 'https://github.com/revengemiroz/VanillaJS/tree/master/Nepali-Calendar'
 
+    }
 ]
 
 const containerEl = document.querySelector('.container')
