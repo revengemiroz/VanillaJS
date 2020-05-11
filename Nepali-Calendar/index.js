@@ -17,7 +17,7 @@ function eventLog(event) {
     console.log(output.type)
     const date = output.datePickerData.adDate.toString()
     console.warn(typeof output)
-    englishDate.textContent += `${date.substring(0, 16)}`
+    englishDate.textContent = `English Date :${date.substring(0, 16)}`
 }
 
 const englishDate = document.querySelector('.englishDate')
