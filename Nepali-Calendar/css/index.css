@@ -62,6 +62,7 @@ input[type='text']{
     text-align: center;
     margin-left: 2em;
     font-weight: 700;
+    cursor: pointer;
 }
 
 input[type='text']:hover{
@@ -70,13 +71,30 @@ input[type='text']:hover{
     transition: 0.3s linear;
 }
 
-
 .englishDate{
     font-weight: 600;
     font-size: 1.5rem;
     text-align: center;
     margin-top: 2em;
     color: #222222;
+}
+
+.thanks{
+    margin-top: 2em;
+}
+
+a{
+    text-decoration: none;
+    color: #f18867;
+}
+
+a:hover{
+    font-size: 1.2rem;
+    transition: 0.5s linear;
+}
+
+a:visited{
+    color: #f18867;
 }
 
 @media (max-width:540px){
