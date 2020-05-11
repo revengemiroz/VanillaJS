@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-color: #f4f7fc;
+    font-family: 'Muli';
+}
+
+span{
+    width: 100%;
+    /* border: 2px solid green; */
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 600;
+    
+    margin: 0 2em 1.5em 2em;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    margin: 0 2em 0 2em;
+    background-color: #ffffff;
+    padding: 3em 3em 3em 3em;
+    /* border: 2px solid green; */
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow:7px 7px 15px rgba(55, 84, 170, 0.15), -7px -7px 20px rgba(255, 255, 255, 1), inset 0px 0px 4px rgba(255, 255, 255, 0.2), inset 7px 7px 15px rgba(55, 84, 170, 0), inset -7px -7px 20px rgba(255, 255, 255, 0), 0px 0px 4px rgba(255, 255, 255, 0)
+}
+
+.input{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+label{
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: #222222;
+}
+
+input[type='text']{
+    max-width: 300px;
+    padding: 0.5em 0 0.5em 0;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid #222222;
+    box-shadow: 7px 7px 15px rgba(55, 84, 170, 0.15), -7px -7px 20px rgba(255, 255, 255, 1), inset 0px 0px 4px rgba(255, 255, 255, 0.2), inset 7px 7px 15px rgba(55, 84, 170, 0), inset -7px -7px 20px rgba(255, 255, 255, 0), 0px 0px 4px rgba(255, 255, 255, 0);
+    font-size: 1.5rem;
+    text-align: center;
+    margin-left: 2em;
+    font-weight: 700;
+}
+
+input[type='text']:hover{
+    background-color: #222222;
+    color: white;
+    transition: 0.3s linear;
+}
+
+
+.englishDate{
+    font-weight: 600;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 2em;
+    color: #222222;
+}
+
+@media (max-width:540px){
+
+    .container{
+        width: 460px;
+    }
+
+    label{
+        font-size: 1.5rem;
+    }
+
+    input[type='text']{
+        max-width: 200px;
+    }
+
+}
+
+@media (max-width:470px){
+    
+    span{
+        font-size: 2rem;
+    }
+
+    .container{
+        width: 410px;
+    }
+
+    .input{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    label{
+        margin-bottom: 1em;
+    }
+
+    input[type='text']{
+        max-width: 200px;
+        margin-left: 0em;
+    }
+
+}
+
+@media (max-width:420px){
+
+    .container{
+        width: 320px;
+    }
+
+    .englishDate{
+        margin:1.5em 0.4em 0 0.4em;
+    }
+
+
+}
