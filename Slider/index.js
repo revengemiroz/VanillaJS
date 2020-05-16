@@ -88,8 +88,8 @@ prev.addEventListener('click', () => {
 })
 
 
-window.onload = () => {
-    window.addEventListener('keyup', () => {
-        alert('key is pressed')
+window.onload = (e) => {
+    window.addEventListener('touchend', () => {
+        alert('click')
     })
 }
