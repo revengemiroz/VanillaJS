@@ -7,7 +7,8 @@ const imgId = document.querySelector('.imgId')
 console.warn(screen.width, screen.height)
 
 const imagePath = ['a.jpg', 'b.jpeg', 'c.jpg', 'd.jpg', 'e.jpg', 'f.png', 'g.jpg']
-console.warn(imagePath.length)
+
+
 var newImg = new Image;
 newImg.onload = function () {
     slider.src = this.src;
@@ -16,6 +17,7 @@ newImg.onload = function () {
     dimension(this.width, this.height)
 }
 newImg.src = `${imagePath[0]}`
+
 imgId.innerText = '1'
 let counter = 0;
 
@@ -46,8 +48,6 @@ function dimension(w, h) {
     }
 }
 
-
-
 function inc(count) {
 
     if (count < 0) {
@@ -70,7 +70,6 @@ function inc(count) {
         imgId.innerText = `${counter + 1}`
     }
 }
-
 
 next.addEventListener('click', () => {
     console.log(counter)
