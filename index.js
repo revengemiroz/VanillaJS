@@ -86,6 +86,10 @@ const projects = [
     {
         name: 'Nepali-Calendar',
         github: 'https://github.com/revengemiroz/VanillaJS/tree/master/Nepali-Calendar'
+    },
+    {
+        name: 'Slider',
+        github: 'https://github.com/revengemiroz/VanillaJS/tree/master/Slider'
 
     }
 ]
@@ -93,8 +97,8 @@ const projects = [
 const containerEl = document.querySelector('.container')
 
 
-const display = () => {
-    projects.forEach((project, index) => {
+const display = (p) => {
+    p.forEach((project, index) => {
         const boxEl = document.createElement('li')
         boxEl.classList.add('box')
 
@@ -143,8 +147,8 @@ const formatNames = (n) => {
 
 
 
-display()
-var pattern = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'];
+display(projects)
+var pattern = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'x', 'x', 'x'];
 var current = 0;
 
 var keyHandler = function (event) {
@@ -161,15 +165,24 @@ var keyHandler = function (event) {
     // If complete, alert and reset
     if (pattern.length === current) {
         current = 0;
-        modal.classList.add('show');
+        containerEl.innerHTML = ''
+        const arr = []
+        arr.push(...projects, {
+            name: 'Nepali-Calendar',
+            github: 'https://github.com/revengemiroz/VanillaJS/tree/master/Nepali-Calendar'
 
-        video.innerHTML = `<video autoplay class="video" width="320" height="240" loop>
-        <source
-            src="Jack-Black.mp4"
-            type="video/mp4">
-        <source src="movie.ogg" type="video/ogg">
-        Your browser does not support the video tag.
-    </video>`
+        })
+        console.warn(arr)
+        display(arr)
+        //     modal.classList.add('show');
+
+        //     video.innerHTML = `<video autoplay class="video" width="320" height="240" loop>
+        //     <source
+        //         src="Jack-Black.mp4"
+        //         type="video/mp4">
+        //     <source src="movie.ogg" type="video/ogg">
+        //     Your browser does not support the video tag.
+        // </video>`
     }
 
 
