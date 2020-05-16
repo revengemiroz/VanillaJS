@@ -12,9 +12,8 @@ var newImg = new Image;
 newImg.onload = function () {
     slider.src = this.src;
     console.log(`width : ${this.width},height : ${this.height}`)
-    container.style.width = `${this.width}px`
-    container.style.height = `${this.height}px`
-    // dimension(this.width, this.height)
+
+    dimension(this.width, this.height)
 }
 newImg.src = `${imagePath[0]}`
 imgId.innerText = '1'
