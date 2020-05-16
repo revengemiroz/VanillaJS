@@ -88,5 +88,8 @@ prev.addEventListener('click', () => {
 })
 
 
-var preload = new Image();
-preload.src = 'a.jpg';
+window.onload = () => {
+    window.addEventListener('keyup', () => {
+        alert('key is pressed')
+    })
+}
