@@ -168,8 +168,8 @@ var keyHandler = function (event) {
         containerEl.innerHTML = ''
         const arr = []
         arr.push(...projects, {
-            name: 'Nepali-Calendar',
-            github: 'https://github.com/revengemiroz/VanillaJS/tree/master/Nepali-Calendar'
+            name: 'Slider1',
+            github: 'https://github.com/revengemiroz/VanillaJS/tree/master/Slider1'
 
         })
         console.warn(arr)
