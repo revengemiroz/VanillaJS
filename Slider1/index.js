@@ -6,7 +6,7 @@ const imgId = document.querySelector('.imgId')
 
 console.warn(screen.width, screen.height)
 
-const imagePath = ['a.jpg', 'b.jpeg', 'c.jpg', 'd.jpg', 'e.jpg', 'f.jpg', 'g.jpg']
+const imagePath = ['a.jpg', 'b.jpeg', 'c.jpg', 'd.jpg', 'e.jpg', 'f.png', 'g.jpg']
 console.warn(imagePath.length)
 var newImg = new Image;
 newImg.onload = function () {
