@@ -91,7 +91,13 @@ const projects = [
         name: 'Slider',
         github: 'https://github.com/revengemiroz/VanillaJS/tree/master/Slider'
 
+    },
+    {
+        name: 'Todo-List',
+        github: 'https://github.com/revengemiroz/VanillaJS/tree/master/Todo-List'
+
     }
+
 ]
 
 const containerEl = document.querySelector('.container')
