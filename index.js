@@ -101,6 +101,11 @@ const projects = [
         name: 'Recipe',
         github: 'https://github.com/revengemiroz/VanillaJS/tree/master/Recipe'
 
+    },
+    {
+        name: 'General-Questions',
+        github: 'https://github.com/revengemiroz/VanillaJS/tree/master/General-Questions'
+
     }
 
 ]
