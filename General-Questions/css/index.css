@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #f1f5f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container{
+    margin-top: 3.5em;
+    /* border: 2px solid green; */
+}
+
+.container>p{
+    color: #c59d5f;
+    font-size: 2.5rem;
+    text-align: center;
+    font-family: 'Great Vibes', cursive;
+    font-weight: 900;
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    width: 550px;
+}
+
+
+article{
+    font-family: 'Roboto',sans-serif;
+    background-color: white;
+    margin-top: 2em;
+    
+    padding: 2em 1.2em 1.7em 1.2em;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.question{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.1rem;
+    letter-spacing: 0.2em;
+    border-bottom: none;
+    padding-bottom: 1em;
+}
+
+.question>p{
+    font-weight: 400;
+    color: #102a42;
+}
+
+.answer{
+    display: none;
+    margin-top: 1.3em;
+    color: #6a849e;
+    max-width: 500px;
+    line-height: 1.5em;
+}
+
+i{
+    color: #c59d5f;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.minus{
+    display: none;
+}
+
+.plus{
+    display: block;
+}
+
+@media (max-width:650px){
+    section{
+        width: 430px;
+    }
+}
+
+@media (max-width:450px){
+    section{
+        width: 390px;
+    }
+}
+
+@media (max-width:400px){
+    section{
+        width: 350px;
+    }
+}
