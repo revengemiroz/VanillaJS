@@ -209,6 +209,26 @@ function setIcons(getIcon) {
     }
 }
 
+
+//dark theme
+function toggleTheme() {
+    const theme = document.getElementsByTagName("html")[0]
+    if (theme.hasAttribute("data-theme")) {
+        theme.removeAttribute("data-theme")
+        return
+    }
+
+    theme.setAttribute("data-theme", "dark")
+}
+
+document
+    .querySelector(".darkmode")
+    .addEventListener("click", toggleTheme);
+
+
+
+
+
 // setIcons('sleet')
 // https://maxdow.github.io/skycons/
 

@@ -7,7 +7,7 @@
       5px 5px 8px rgba(0, 0, 0, 0.07);
   }
   
-  [data-theme="dark"] {
+  html[data-theme="dark"] {
     --font-color: #fff;
     --bg-color: #181818;
     --button-bg-color: #121212;
