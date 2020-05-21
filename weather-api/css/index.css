@@ -246,6 +246,10 @@
       width: 100%;
   }
 
+  input[type='text']::placeholder{
+    font-size: 0.8em;
+  }
+
 .country{
   letter-spacing: 0.1em;
   text-transform: capitalize;
