@@ -9,7 +9,7 @@ btn.addEventListener('click', () => {
     btn.remove()
     const input = document.createElement('INPUT')
     input.setAttribute("type", "text");
-    input.setAttribute("placeholder", "Enter Country");
+    input.setAttribute("placeholder", "eg: Singapore or Beijing");
     // input.setAttribute("value", `${country.innerText}`);
     input.setAttribute('onkeydown', 'enter(this)')
     input.classList.add('input-link')

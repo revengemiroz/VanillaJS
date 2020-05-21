@@ -253,12 +253,12 @@
 
 .iconName,.weather{
   text-transform: capitalize;
+  overflow: hidden;
 }
 
 canvas{
   width:100px;
   height:70px;
-  font-size: 2em;
 }
 
 @keyframes a{
