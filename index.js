@@ -106,7 +106,12 @@ const projects = [
         name: 'General-Questions',
         github: 'https://github.com/revengemiroz/VanillaJS/tree/master/General-Questions'
 
-    }
+    },
+    {
+        name: 'weather-api',
+        github: 'https://github.com/revengemiroz/VanillaJS/tree/master/weather-api'
+
+    },
 
 ]
 
