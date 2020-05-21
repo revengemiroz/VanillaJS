@@ -78,10 +78,11 @@ function getWeather(weatherdata) {
             console.log(farenhite)
             farenhite.push(data.currently.temperature)
             console.log(farenhite)
-            buttondialspoke.style.animation = ''
+
             weather.innerText = data.currently.summary
             temp.innerHTML = `${toCelcius((data.currently.temperature))} &deg;C`
             console.log('Output: ', data);
+            buttondialspoke.style.animation = ''
         }).catch(err => {
             console.error(err);
             alert('api has made to many request for a free version')
