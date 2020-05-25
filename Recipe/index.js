@@ -88,10 +88,12 @@ const allMenus = document.querySelector('.allMenus')
 
 function displayMenuButtons(menu) {
     let uniq = ['all']
+
     for (const [keys, values] of Object.entries(menu)) {
         uniq.push(values.category)
-
     }
+
+    //get uniq arrays remove duplicates
     uniq = [...new Set(uniq)]
 
     uniq.map(a => {
@@ -103,12 +105,15 @@ function displayMenuButtons(menu) {
 }
 
 function displayMenusDescription(menu) {
+    //clear when loaded initally and also in each append 
     allMenus.innerHTML = ''
+
     for (const [keys, values] of Object.entries(menu)) {
         const html = `
         <article>
+        
             <div class='image'>
-                <img src='${values.img}'></img>
+                <img src='${values.img}' alt='${values.title}'></img>
             </div>
             
             <div class='details'>
@@ -119,11 +124,12 @@ function displayMenusDescription(menu) {
                 </div>
                 
                 <div class='description'>
-                <p>${values.desc}</p>
+                <p>${captialize(values.desc)}</p>
                 </div>
+            
             </div>
 
-            </article>
+        </article>
             `
 
         allMenus.innerHTML += html
@@ -136,20 +142,26 @@ displayMenuButtons(menu)
 
 const allButtons = document.querySelectorAll('.menuCategory')
 
+
 allButtons.forEach(button => {
     const text = button.textContent
-    console.log(text)
-    click(button, text)
-})
 
-function click(a, text) {
-    a.addEventListener('click', () => {
+    //loop over all the buttons and then clear the style
+    button.addEventListener('click', () => {
+
+        allButtons.forEach(button => {
+            button.style.backgroundColor = ''
+            button.style.color = ''
+        })
+
+        //keep the button highlighted
+        button.style.backgroundColor = '#c59d5f'
+        button.style.color = 'white'
 
         if (captialize(text) == 'All') {
             displayMenusDescription(menu)
         }
         else {
-
             // stackOverflow
             Object.filter = (menu, predicate) =>
                 Object.keys(menu)
@@ -157,13 +169,14 @@ function click(a, text) {
                     .reduce((res, key) => (res[key] = menu[key], res), {});
 
             const updatedMenu = Object.filter(menu, s => captialize(s.category) == text)
-            console.warn(updatedMenu)
+
             displayMenusDescription(updatedMenu)
         }
     })
+})
+
+function captialize(word) {
+    return word.charAt(0).toUpperCase() + word.slice(1)
 }
 
-function captialize(a) {
-    return a.charAt(0).toUpperCase() + a.slice(1)
-}
-
+//refactored once
