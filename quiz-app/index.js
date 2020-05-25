@@ -44,7 +44,7 @@ function updateUI(data) {
 
 
         a.addEventListener('click', () => {
-            alert(q)
+            // alert(q)
             checkAnswer(a, data)
         })
     })
