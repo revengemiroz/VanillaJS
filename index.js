@@ -112,6 +112,11 @@ const projects = [
         github: 'https://github.com/revengemiroz/VanillaJS/tree/master/weather-api'
 
     },
+    {
+        name: 'quiz-app',
+        github: 'https://github.com/revengemiroz/VanillaJS/tree/master/quiz-app'
+
+    },
 
 ]
 
