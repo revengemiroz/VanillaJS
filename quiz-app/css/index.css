@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans&display=swap");
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f7fc;
+    font-family: "Noto Sans", sans-serif;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 2.5em 2em 2em 2em;
+   
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 7px 7px 15px rgba(55, 84, 170, 0.15),
+    -7px -7px 20px rgba(255, 255, 255, 1),
+    inset 0px 0px 4px rgba(255, 255, 255, 0.2),
+    inset 7px 7px 15px rgba(55, 84, 170, 0),
+    inset -7px -7px 20px rgba(255, 255, 255, 0),
+    0px 0px 4px rgba(255, 255, 255, 0);
+    max-width: 750px;
+}
+
+.scoreContainer{
+    margin-bottom: 0.5em;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #212121;
+
+}
+
+.amount{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    max-width: 650px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.amount>label{
+    font-size: 1.7rem;
+    margin-bottom: 2em;
+}
+
+.question{
+    text-align: center;
+    font-size: 2rem;
+    max-width: 600px;
+    color: #212121;
+}
+
+.answerContainer{
+    display: flex;
+    
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /* border: 2px solid green; */
+    margin-top: 1.5em;
+}
+
+.answer{
+    letter-spacing: 0.1em;
+}
+
+.answer.wrong{
+    background-color: #e74c3c;
+    color: white;
+    border: 1px solid #e74c3c;
+    cursor: not-allowed;
+}
+
+.answer.right{
+    background-color: #2ecc71;
+    color: white;
+    border: 1px solid #2ecc71;
+}
+
+.pass{
+    letter-spacing: 0.1em;
+    padding: 0.6em 1.2em 0.6em 1.2em;
+}
+
+.hiddenAnswer{
+    visibility: hidden;
+}
+
+input[type='text']{
+    max-width: 200px;
+    background-color: #ffffff;
+    outline: none;
+    font-size: 1rem;
+    border: 1px solid #DFE1E5;
+    border-radius: 5px;
+    padding: 0.6em 0 0.6em 1em;
+    color: #70757A;
+    -moz-appearance: textfield;
+}
+
+input[type='text']:focus{
+    border: 2px solid #e2bc73;
+}
+
+button{
+    background-color: #ffffff;
+    padding: 0.5em;
+    font-size: 1rem;
+    border-radius:7px;
+    outline: none;
+    border: 1px solid #DFE1E5;
+    margin-left: 1em;
+    margin-top: 1.5em;
+    cursor: pointer;
+    
+}
+
+button:hover{
+    color: white;
+    background-color: #212121;
+    transition: 0.3s linear;
+    border: 1px solid #212121;
+    box-shadow: 7px 7px 15px rgba(55, 84, 170, 0.15),
+    -7px -7px 20px rgba(255, 255, 255, 1),
+    inset 0px 0px 4px rgba(255, 255, 255, 0.2),
+    inset 7px 7px 15px rgba(55, 84, 170, 0),
+    inset -7px -7px 20px rgba(255, 255, 255, 0),
+    0px 0px 4px rgba(255, 255, 255, 0);
+}
+
+p{
+    text-align: center;
+    font-size: 3rem;
+}
