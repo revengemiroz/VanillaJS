@@ -61,6 +61,7 @@ passbtn.addEventListener('click', () => {
         container.innerHTML = `
         <p>All Question are Completed</>
         `
+        passbtn.style.display = 'none'
     }
 })
 
@@ -109,6 +110,7 @@ function checkAnswer(clickedanswer, data) {
             container.innerHTML = `
             <p>All question are completed</>
             `
+            passbtn.style.display = 'none'
         }
 
     }
