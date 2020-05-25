@@ -99,8 +99,6 @@ function checkAnswer(clickedanswer, data) {
         score.textContent = s + 1
         scoreColor(parseFloat(score.textContent))
         // button.classList.add('right')
-        alert('correct')
-
 
         if (count < inputno[0]) {
 
@@ -111,7 +109,6 @@ function checkAnswer(clickedanswer, data) {
             container.innerHTML = `
             <p>All question are completed</>
             `
-            alert('question finished')
         }
 
     }
@@ -120,7 +117,6 @@ function checkAnswer(clickedanswer, data) {
         scoreColor(parseFloat(score.textContent))
         button.classList.add('wrong')
         button.disabled = true
-        alert('incorrect')
 
     }
 }
