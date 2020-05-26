@@ -59,7 +59,8 @@ passbtn.addEventListener('click', () => {
     }
     else {
         container.innerHTML = `
-        <p>All Question are Completed</>
+        <p>All Question are Completed</p>
+        <button onclick='location.reload()'>Restart</button>
         `
         passbtn.style.display = 'none'
     }
@@ -108,7 +109,8 @@ function checkAnswer(clickedanswer, data) {
         }
         else {
             container.innerHTML = `
-            <p>All question are completed</>
+            <p>All question are completed</p>
+            <button onclick='location.reload()'>Restart</button>
             `
             passbtn.style.display = 'none'
         }
@@ -128,9 +130,14 @@ window.onload = () => {
     question.innerHTML = `
     <div class='amount'>
     <label>Enter the amount of question that you want to answer</label>
-    <input type='text' class='input' maxlength='2' onkeydown='enter(this)' placeholder='Enter the amount'></>
-    <small>press enter </small>
-    <div>
+    
+    <div class='Container'>
+        <input type='text' class='input' maxlength='2' onkeydown='enter(this)' placeholder='Enter the amount'>
+        <button onclick='getClick()'>Get</button>
+    </div>
+    
+    <small>please enter </small>
+    </div>
     `
 
     passbtn.style.display = 'none'
@@ -140,7 +147,7 @@ window.onload = () => {
 
 
 function enter(e) {
-    if (event.key === 'Enter') {
+    if (event.key === 'Enter' || e.clicked == true) {
         if ((e.value > 0 && e.value <= 50)) {
 
             getAPI(e.value)
@@ -156,6 +163,23 @@ function enter(e) {
         }
     }
 
+}
+
+function getClick() {
+    const inputs = document.querySelector('.input')
+    if ((inputs.value > 0 && inputs.value <= 50)) {
+
+        getAPI(inputs.value)
+        inputno.push(inputs.value)
+        setTimeout(function () {
+            updateUI(a[0][count])
+            passbtn.style.display = 'block'
+        }, 1000);
+
+    }
+    else {
+        alert(`Invalid format (must be between 1 and 50)`)
+    }
 }
 
 //stack overflow to randomize an array

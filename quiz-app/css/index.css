@@ -23,7 +23,7 @@ body{
     flex-wrap: wrap;
     flex-direction: column;
     padding: 2.5em 2em 2em 2em;
-   
+    margin: 0 2em 0 2em;
     background-color: #ffffff;
     border-radius: 10px;
     box-shadow: 7px 7px 15px rgba(55, 84, 170, 0.15),
@@ -58,6 +58,8 @@ body{
     font-size: 1.7rem;
     margin-bottom: 2em;
 }
+
+
 
 .question{
     text-align: center;
@@ -146,4 +148,8 @@ button:hover{
 p{
     text-align: center;
     font-size: 3rem;
+}
+
+small{
+    margin-top: 2em;
 }
