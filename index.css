@@ -122,6 +122,12 @@ li > a{
   color:  var(--color-third);
 }
 
+li>a:hover{
+  background-color: var(--color-third);
+  color: white;
+  border: 2px solid var(--color-third);
+}
+
 a:hover{
   background-color: var(--color-third);
   color: white;
