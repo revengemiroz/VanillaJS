@@ -17,6 +17,7 @@
     box-sizing: border-box;
     line-height: 1.4;
     font-family: 'Libre Franklin';
+    
   }
   
   *, *:before, *:after {
@@ -27,15 +28,16 @@
   body{
       display: flex;
       flex-direction: column;
-   
-    text-align: center;
-    background-color: #f7f8fc;
+      cursor: url(./svg/cursor.svg),auto!important;
+      text-align: center;
+      background-color: #f7f8fc;
     
 }
 
 h1{
     font-family: 'Montserrat';
     color: var(--color-second);
+    
 }
 
 .right{
@@ -149,7 +151,7 @@ a:hover{
   }
   
   .c-subscribe-box {
-      margin: 2em;
+    margin: 2em;
     width: var(--block-width);
     height: var(--block-height);
     
@@ -310,7 +312,7 @@ button {
 	border: 0;
 	border-radius: 5px;
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-	cursor: pointer;
+	cursor: url(./svg/cursor.svg);
 	color: #fff;
 	font-family: inherit;
 	font-size: 14px;
