@@ -309,10 +309,6 @@ modal part */
 /* 	transition: transform 0.3s ease; */
 }
 
-.modal-container.show .modal {
-/* 	transform: translateY(0); */
-}
-
 .modal h1 {
 	margin: 0;
 }
