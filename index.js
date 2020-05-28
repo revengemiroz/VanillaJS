@@ -134,7 +134,7 @@ const display = (p) => {
                     <div class="rainbow"><span></span><span></span></div>
                     <div class="c-subscribe-box__wrapper">
                             <a href="/${project.name}/index.html">
-                                <img src='/${project.name}/design/desktop-preview.${jpg || png}'></img> 
+                                <img src='/${project.name}/design/desktop-preview.jpg'></img> 
                             </a>
                         <h3 class="c-subscribe-box__title">${index + 1}.  ${formatNames(project.name)}</h3>
 
