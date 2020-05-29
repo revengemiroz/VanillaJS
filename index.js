@@ -148,7 +148,7 @@ const display = (p) => {
                     <div class="links">
                                     <ul>
                                     <li><a href="">
-                                        <i class="fab fa-twitter-t"></i>
+                                        <i class="fab fa-facebook-f"></i>
                                         </a></li>
 
                                     <li><a href=${project.github}>
