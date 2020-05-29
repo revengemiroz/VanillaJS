@@ -7,26 +7,29 @@ const video = document.querySelector('.video')
 close.addEventListener('click', () => {
 
     console.log('close')
-    video.innerHTML = `<video class="video" width="320" height="240">
-    <source
-        src="Jack-Black.mp4"
-        type="video/mp4">
-    <source src="movie.ogg" type="video/ogg">
-    Your browser does not support the video tag.
-</video>`
+    video.innerHTML = `
+    <video class="video" width="320" height="240">
+        <source
+            src="Jack-Black.mp4"
+            type="video/mp4">
+        <source src="movie.ogg" type="video/ogg">
+            Your browser does not support the video tag.
+    </video>`
     modal.classList.remove('show');
 });
 
 //close modal when clicked outside the the modal
 document.onclick = (e) => {
     if (e.target.classList.contains('modal-container')) {
-        video.innerHTML = `<video class="video" width="320" height="240">
-        <source
-            src="Jack-Black.mp4"
-            type="video/mp4">
-        <source src="movie.ogg" type="video/ogg">
-        Your browser does not support the video tag.
-    </video>`
+        video.innerHTML = `
+        <video class="video" width="320" height="240">
+            <source
+                src="Jack-Black.mp4"
+                type="video/mp4">
+            <source src="movie.ogg" type="video/ogg">
+
+                 Your browser does not support the video tag.
+        </video>`
         modal.classList.remove('show');
     }
 }
@@ -136,30 +139,31 @@ const display = (p) => {
         const CardHtml = `
          
             <div class="c-subscribe-box u-align-center">
-                    <div class="rainbow"><span></span><span></span></div>
+                    
+                <div class="rainbow"><span></span><span></span></div>
+                    
                     <div class="c-subscribe-box__wrapper">
                             <a href="/${project.name}/index.html">
                                 <img src='/${project.name}/design/desktop-preview.jpg' alt='${project.name}'></img> 
                             </a>
-                        <h3 class="c-subscribe-box__title">${index + 1}.  ${formatNames(project.name)}</h3>
-
-                                                    
+                        <h3 class="c-subscribe-box__title">${index + 1}.  ${formatNames(project.name)}</h3>                                
                     </div>
+
                     <div class="links">
                                     <ul>
-                                    <li><a href="">
-                                        <i class="fab fa-facebook-f"></i>
-                                        </a></li>
+                                        <li><a href="">
+                                            <i class="fab fa-facebook-f"></i>
+                                            </a></li>
 
-                                    <li><a href=${project.github}>
-                                        <i class="fab fa-github"></i>
-                                        </a></li>
+                                        <li><a href=${project.github}>
+                                            <i class="fab fa-github"></i>
+                                            </a></li>
 
-                                    <li><a href="https://www.instagram.com/mirozuzamaki/">
-                                        <i class="fab fa-instagram"></i>
-                                        </a></li>
+                                        <li><a href="https://www.instagram.com/mirozuzamaki/">
+                                            <i class="fab fa-instagram"></i>
+                                            </a></li>
                                     </ul>
-                                </div>
+                    </div>
             </div>
             
           `
@@ -205,15 +209,7 @@ var keyHandler = function (event) {
         })
         console.warn(arr)
         display(arr)
-        //     modal.classList.add('show');
 
-        //     video.innerHTML = `<video autoplay class="video" width="320" height="240" loop>
-        //     <source
-        //         src="Jack-Black.mp4"
-        //         type="video/mp4">
-        //     <source src="movie.ogg" type="video/ogg">
-        //     Your browser does not support the video tag.
-        // </video>`
     }
 
 
@@ -222,34 +218,3 @@ var keyHandler = function (event) {
 // Listen for keydown events
 document.addEventListener('keydown', keyHandler, false);
 
-
-
-// <div class='imageScale'>
-
-// <a href="/${project.name}/index.html">
-// <img src='/${project.name}/design/desktop-preview.jpg'></img>            </a>
-
-// </div>
-// <p class='title'>${index + 1}.  ${formatNames(project.name)}<p>
-
-// <div class='socials'>
-// <a href='https://www.instagram.com/mirozuzamaki/?hl=en'> 
-// <i class='fab fa-instagram fa-3x'></i>
-
-// </a>
-
-// <a href=${project.github}> 
-// <i class='fab fa-github fa-3x'></i>
-
-// </a>
-
-// </div>
-
-
-
-
-
-
-
-
-//output https://epic-sinoussi-268bd1.netlify.com/
