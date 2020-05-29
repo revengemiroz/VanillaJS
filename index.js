@@ -155,7 +155,7 @@ const display = (p) => {
                                         <i class="fab fa-github"></i>
                                         </a></li>
 
-                                    <li><a href="">
+                                    <li><a href="https://www.instagram.com/mirozuzamaki/">
                                         <i class="fab fa-instagram"></i>
                                         </a></li>
                                     </ul>
