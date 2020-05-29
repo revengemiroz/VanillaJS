@@ -117,6 +117,11 @@ const projects = [
         github: 'https://github.com/revengemiroz/VanillaJS/tree/master/quiz-app'
 
     },
+    {
+        name: 'Emoji-Finder',
+        github: 'https://github.com/revengemiroz/VanillaJS/tree/master/Emoji-Finder'
+
+    },
 
 ]
 
